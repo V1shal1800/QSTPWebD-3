@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Homemade Apple', cursive;
+    color: black;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://wallpaperaccess.com/full/884549.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.navbar, .navbar-brand{
+    padding: 0;
+}
+
+.navbar,footer{
+    background-color: rgba(216, 214, 214, 0.2);
+}
+
+#InputArea{
+    padding: 2px;
+}
+
+#TranslatedText{
+    background-color: rgba(216, 214, 214, 0.6);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer{
+    margin: 10px;
+}
+
+#Logo{
+    height: 150px;
+    width: 350px;
+    animation: Logo 2s ease;
+}
+
+
+
+@keyframes Logo{
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
