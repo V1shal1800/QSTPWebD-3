@@ -4,10 +4,19 @@ form.text = document.querySelector('#input_text');
 form.translateButton = document.querySelector('#TButton');
 
 const TranslatedText = document.querySelector('#TranslatedText');
-const TargetArea = document.querySelector('#TargetArea')
+const TargetArea = document.querySelector('#TargetArea');
+
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
 
 function Translate(){
-    let text =form.text.value;
+    let text = escapeHtml(form.text.value);
     TargetArea.innerHTML = "";
 
     fetch("https://api.funtranslations.com/translate/pirate.json", {
